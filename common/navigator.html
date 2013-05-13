@@ -1,0 +1,36 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="<?php echo base_url('admin');?>" target="_blank">管理后台 </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <?php $model = strtolower($this->uri->segment(1)); $method = strtolower($this->uri->segment(2));?>
+                    <li class="<?php if(0 == strcmp($model,'admin') && 0 == strcmp($method,'blog')){echo 'active';} ?>">
+                        <a href="<?php echo base_url('admin/blog');?>" target="_blank">碎碎念管理</a>
+                    </li>
+                    <li class="<?php if(0 == strcmp($model,'admin') && 0 == strcmp($method,'tag')){echo 'active';} ?>">
+                        <a href="<?php echo base_url('admin/tag');?>" target="_blank">碎碎签管理</a>
+                    </li>
+                    <li class="<?php if(0 == strcmp($model,'admin') && 0 == strcmp($method,'drafts')){echo 'active';} ?>">
+                        <a href="<?php echo base_url('admin/drafts');?>" target="_blank">草稿箱</a>
+                    </li>
+                    <li class="<?php if(0 == strcmp($model,'admin') && 0 == strcmp($method,'user')){echo 'active';} ?>">
+                        <a href="<?php echo base_url('admin/user');?>" target="_blank">用户管理</a>
+                    </li>
+                    <li class="<?php if(0 == strcmp($model,'admin') && 0 == strcmp($method,'feedback')){echo 'active';} ?>">
+                        <a href="<?php echo base_url('admin/feedback');?>" target="_blank">反馈</a></li>
+                </ul>
+                <ul class="nav pull-right" id="user-top-bar">
+                    <li>
+                        <a href="<?php echo base_url('admin/newBlog');?>" target="_blank">写碎碎</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

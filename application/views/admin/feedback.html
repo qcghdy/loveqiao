@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <meta name="description" content="有爱，生活才会精彩" />
+    <meta name="keywords" content="爱情,爱,家庭,个人博客" />
+    <meta name="application-name" content="子木小乔-个人微博客" />
+    <base href="<?php echo base_url();?>">
+
+    <!-- Bootstrap Reference Begin-->
+    <link href="<?php echo base_url('static/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?php echo base_url('static/css/bootstrap-responsive.min.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <!--日期时间选择器：datetimepicker Begin-->
+    <link href="<?php echo base_url('static/bootstrap-datetimepicker-master/css/datetimepicker.css');?>" rel="stylesheet" media="screen">
+    <!--日期时间选择器：datetimepicker End-->
+    <!-- Bootstrap Reference End-->
+
+    <link href="<?php echo base_url('static/css/loveqiao.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?php echo base_url('static/css/admin.css');?>" rel="stylesheet" type="text/css" media="screen">
+
+
+
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<!-- S Header  这部分是公用的-->
+<?php include_once('common/header.html'); ?>
+<!-- E Header  这部分是公用的-->
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <section>
+                <div class="page-header">
+                    <h4>子木小乔 个人博客管理后台 <small>在光之上，静享生活</small></h4>
+                </div>
+            </section>
+            <section>
+                <!-- S Navigator  这部分是公用的-->
+                <?php include_once('common/navigator.html'); ?>
+                <!-- E Navigator  这部分是公用的-->
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div>
+                            <table class="table table-striped table-bordered table-condensed table-content-center" id="admin-blog-operation">
+                                <thead>
+                                    <tr>
+                                        <th colspan="8" style="text-align: left;">用户反馈查询结果</th>
+                                    </tr>
+                                    <tr style="margin: 5px 0px;height: 50px">
+                                        <th colspan="8" style="text-align: left">
+                                            <button class="btn btn-small" id="chooseAll">全选</button>
+                                            <button class="btn btn-small" id="reverseChoose">反选</button>
+                                            <button class="btn btn-small" id="setFlagRead">标记已读</button>
+                                            <button class="btn btn-small" id="delete">删除</button>
+                                            <select class="span2 pull-right" id="feedback-type">
+                                                <option>未读</option>
+                                                <option>已读</option>
+                                            </select>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width: 30px;">&nbsp;</th>
+                                        <th>反馈ID</th>
+                                        <th>反馈者</th>
+                                        <th>邮箱</th>
+                                        <th>反馈内容</th>
+                                        <th>反馈时间</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                    foreach($feedbacks as $feedback){
+                                        $feedbackBrief = '';
+                                        if(strlen($feedback['feedback']) >= 40){
+                                            $feedbackBrief = mb_substr(strip_tags($feedback['feedback']),0, 20,'utf-8') . "...";
+                                        }else{
+                                            $feedbackBrief = $feedback['feedback'];
+                                        }
+                                ?>
+                                    <tr>
+                                        <td><input type="checkbox" value="<?php echo $feedback['feedbackid']?>" name="feedback"></td>
+                                        <td><?php echo $feedback['feedbackid']?></td>
+                                        <td><?php echo htmlspecialchars($feedback['username']); ?></td>
+                                        <td><?php echo htmlspecialchars($feedback['email']); ?></td>
+                                        <td>
+                                            <a href="javascript:void(0);"rel="popover" data-content="<?php echo htmlspecialchars($feedback['feedback']); ?>" data-original-title="<?php echo htmlspecialchars($feedback['username']);?>" data-trigger="hover"><?php echo $feedbackBrief?>
+                                            </a>
+                                        </td>
+                                        <td><?php echo htmlspecialchars($feedback['feedbacktime']); ?></td>
+                                        <td><?php echo htmlspecialchars($feedback['type'] == 0 ? "未读" : "已读");?></td>
+                                        <td>
+                                            <a href="http://localhost/loveqiao/admin/deleteFeedback?fbid=<?php echo $feedback['feedbackid']?>" class="admin-blogs-options">删除</a>
+                                            <a href="http://localhost/loveqiao/admin/setFeedbackRead?fbid=<?php echo $feedback['feedbackid']?>" class="admin-blogs-options">标记已读</a>
+                                        </td>
+                                    </tr>
+                                <?php
+                                    }
+                                ?>
+                                </tbody>
+                            </table>
+                            <form id="feedbackForm" style="display: none">
+                                <input type="hidden" name="fbid" value="" id="request"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="tips-confirm-model">
+    <div class="modal-header dialog_header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4>温馨提示</h4>
+    </div>
+    <div class="alert alert-error delete-confirm-model-alert" id="tips-model-alert">
+    </div>
+    <div class="modal-footer">
+        <button class="btn  btn-primary" data-dismiss="modal">确定</button>
+    </div>
+</div>
+
+
+<!-- S Footer  这部分是公用的-->
+<?php include_once('common/footer.html'); ?>
+<!-- E Footer  这部分是公用的-->
+
+<!-- Bootstrap Reference Begin-->
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+<script src="<?php echo base_url('static/js/jquery.js?v2.3.0');?>"  charset="UTF-8"></script>
+<script src="<?php echo base_url('static/js/bootstrap.min.js');?>"  charset="UTF-8"></script>
+<!-- Bootstrap Reference End-->
+
+<!-- Plugins Begin-->
+
+<!-- Plugins Begin-->
+
+<!-- Applications Begin-->
+<script src="<?php echo base_url('static/js/common.js');?>"></script>
+<script src="<?php echo base_url('static/js/admin/feedback.js');?>"></script>
+<!-- Applications Begin-->
+
+<script type="text/javascript">
+
+
+</script>
+<script>
+
+
+</script>
+</body>
+</html>

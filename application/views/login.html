@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <meta name="description" content="有爱，生活才会精彩" />
+    <meta name="keywords" content="爱情,爱,家庭,个人博客" />
+    <meta name="application-name" content="子木小乔-个人微博客" />
+    <base href="<?php echo base_url();?>">
+
+    <!-- Bootstrap Reference Begin-->
+    <link href="<?php echo base_url('static/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?php echo base_url('static/css/bootstrap-responsive.min.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <!-- Bootstrap Reference End-->
+
+    <link href="<?php echo base_url('static/css/loveqiao.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?php echo base_url('static/css/admin.css');?>" rel="stylesheet" type="text/css" media="screen">
+
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<!-- S Header  这部分是公用的-->
+<?php include_once('common/header.html'); ?>
+<!-- E Header  这部分是公用的-->
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span4 offset4">
+            <section style="margin-top: 50px;">
+                <div class="common-model" role="dialog"  id="sign-in-model">
+                    <div class="modal-header dialog_header">
+                        <h4 id="myModalLabel1">后台登录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" >
+                            <div class="control-group">
+                                <label class="lq-control-label-resize-width" for="username-input-login">账号</label>
+                                <div class="lq-controls-resize-margin-left">
+                                    <input type="text" class="input-xlarge" id="username-input-login" placeholder="请输入账号">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="lq-control-label-resize-width" for="password-input-login">密码</label>
+                                <div class="lq-controls-resize-margin-left">
+                                    <input type="password" class="input-xlarge" id="password-input-login" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="lq-control-label-resize-width" for="captcha-input-login">验证码</label>
+                                <div class="lq-controls-resize-margin-left">
+                                    <input type="password" name="code_num" class="input-xlarge" id="captcha-input-login" placeholder="请输入验证码" maxlength="6">
+                                    <!--<input type="text" id="code-num"  placeholder="请输入验证码" maxlength="6">-->
+                                    <img src="<?php echo base_url('login/captcha').'?t='.mt_rand(1,100000);?>" id="captcha-img-login" title="看不清，点击换一张" style="margin: 7px 7px 7px 0px">
+                                    <a href="javascript:void(0);" id="code-change">看不清，换一张</a>
+                                </div>
+                            </div>
+                            <div class="" id="login-state-tips">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button class="btn" data-dismiss="modal">取消</button>-->
+                        <button class="btn btn-primary" id="login-button-submit">登录</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- S Footer  这部分是公用的-->
+<?php include_once('common/footer.html'); ?>
+<!-- E Footer  这部分是公用的-->
+
+<!-- Bootstrap Reference Begin-->
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+<script src="<?php echo base_url('static/js/jquery.js?v2.3.0');?>"  charset="UTF-8"></script>
+<script src="<?php echo base_url('static/js/bootstrap.min.js');?>"  charset="UTF-8"></script>
+<!-- Bootstrap Reference End-->
+
+<!-- Applications Begin-->
+<script src="<?php echo base_url('static/js/login.js');?>"></script>
+<!-- Applications Begin-->
+
+<script type="text/javascript">
+
+
+</script>
+<script>
+
+
+</script>
+</body>
+</html>

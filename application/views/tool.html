@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>有爱，生活才会精彩</title>
+    <meta name="description" content="有爱，生活才会精彩" />
+    <meta name="keywords" content="爱情,爱,家庭,个人博客" />
+    <base href="<?php echo base_url();?>">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="static/css/home.css" />
+    <link rel="stylesheet" href="static/css/css.css" />
+    <link rel="stylesheet" href="static/css/replybox.css" />
+    <link rel="stylesheet" href="static/styles/1-gray.css" type="text/css" />
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"/>
+
+    <style type="text/css">
+        .banner img{margin: 0 0 5px 0;}
+
+        /*input[type='text']{*/
+            /*width:150px;*/
+            /*display:block;*/
+            /*margin-bottom:10px;*/
+            /*background-color:yellow;*/
+            /*font-family: Verdana, Arial;*/
+        /*}*/
+
+        /*input[type="button"]*/
+        /*{*/
+            /*width:120px;*/
+            /*margin-left:35px;*/
+            /*display:block;*/
+            /*font-family: Verdana, Arial;*/
+        /*}*/
+
+        .box1 {
+            background-color: #f0f0f0;
+            width: 533px;
+            height: 50px;
+            margin: 0 auto 15px auto;
+            padding: 30px;
+            border: 1px solid #d7d7d7;
+
+            -moz-border-radius: 11px;
+            -webkit-border-radius: 11px;
+            border-radius: 11px;
+            behavior: url(border-radius.htc);
+        }
+        .rel {
+            margin: 50px 0 0 33px;
+            padding: 25px;
+            position: relative;
+            z-index: inherit;
+            zoom: 1; /* For IE6 */
+        }
+
+        .to_top {
+            background: url(static/images/gototop-bg.png) no-repeat 0 0;
+            cursor: pointer;
+            height: 41px;
+            width: 52px;
+        }
+
+        #respond_box {
+            position: relative;
+            background: white;
+            width: 710px;
+            margin: 10px 0 0 0;
+            padding: 10px;
+        }
+        .set_avatar {
+            background: url(gray/bg.png) -369px -73px;
+        }
+
+        #commentform #author {
+            background: white url(static/images/login.png) no-repeat 0 -37px;
+            width: 210px;
+            padding: 4px 3px 4px 25px;
+            border: 1px solid #CCC;
+        }
+
+        #commentform #email {
+            background: white url(static/images/login.png) no-repeat 0 -18px;
+            width: 210px;
+            padding: 4px 3px 4px 25px;
+            border: 1px solid #CCC;
+        }
+        #commentform #url {
+            background: white url(static/images/login.png) no-repeat 0 2px;
+            width: 210px;
+            padding: 4px 3px 4px 25px;
+            border: 1px solid #CCC;
+        }
+    </style>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- S Header  这部分是公用的-->
+    <!--222222222222222222#include file="common/header.html"2222222222222222222 -->
+    <?php include_once('common/header.html'); ?>
+    <!-- E Header  这部分是公用的-->
+
+
+    <div class="box">
+        <form name="input" action="" method="get">
+            <input type="text" name="Name" value="Bill" size="20">
+            <input type="text" name="Name" value="Gates" size="20">
+            <input type="button" value="Example Button">
+        </form>
+        <div class="rel">
+            <div class="box1">
+                lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+            </div>
+            <!--div class="box2">
+                this cat is a hybrid of domestic and wild breeds :)
+            </div>
+            <div class="box3">
+                this box is absolutely positioned
+            </div-->
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=441782353&amp;site=qq&amp;menu=yes" target="_blank">
+                <img style="vertical-align: middle;" title="点击这里给我发消息" src="http://www.css88.com/img/pa.gif" border="0" alt="点击这里给我发消息">
+            </a>
+            <div id="ds-reset">
+                <div class="ds-replybox">
+                    <form method="post" action="" onsubmit="return false;">
+                        <input type="hidden" name="thread_id" value="1184784252068167993">
+                        <input type="hidden" name="parent_id" value="">
+                        <input type="hidden" name="author_name" value="">
+                        <input type="hidden" name="author_email" value="">
+                        <input type="hidden" name="author_url" value="">
+                        <div class="ds-replybox-main">
+                            <div class="ds-textarea-wrapper">
+                                <textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧 ..."></textarea>
+                                <pre class="ds-hidden-text"></pre>
+                            </div>
+                            <div class="ds-post-toolbar">
+                                <div class="ds-post-options">
+                                    <span class="ds-sync" style="color: #999;">不想登录？直接点击发布即可作为游客留言|最多可输入500个字符</span>
+                                </div>
+                                <button class="ds-post-button" type="submit">发 布</button>
+                                <div class="ds-toolbar-buttons">
+                                    <a class="ds-toolbar-button ds-add-emote" title="插入表情"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="respond_box">
+                <div id="respond">
+                    <h3>给我留言</h3>
+                    <div class="cancel-comment-reply">
+                        <small><a rel="nofollow" id="cancel-comment-reply-link" href="/about#respond" style="display:none;">点击这里取消回复。</a></small>
+                    </div>
+                    <span class="set_avatar" style="display: none;"><a title="去申请一个自己的Gravatar全球通用头像" target="_blank" href="http://en.gravatar.com/">留言无头像?</a></span>
+                    <form action="http://www.mathke.com/wp-comments-post.php" method="post" id="commentform">
+                        <div id="comment-author-info">
+                            <p>
+                                <input type="text" name="author" id="author" class="commenttext" value="" size="22" tabindex="1">
+                                <label for="author">昵称 *</label>
+                            </p>
+                            <p>
+                                <input type="text" name="email" id="email" class="commenttext" value="" size="22" tabindex="2">
+                                <label for="email">邮箱 *</label>
+                            </p>
+                            <p>
+                                <input type="text" name="url" id="url" class="commenttext" value="" size="22" tabindex="3">
+                                <label for="url">网址</label>
+                            </p>
+                        </div>
+
+                        <!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+                        <div class="clear"></div>
+                        <p><textarea name="w" id="comment" tabindex="4" style="color: rgb(102, 102, 102);"></textarea><div id="loading" style="display: none;"> 正在提交, 请稍候...</div><div id="error" style="display: none;">#</div><textarea name="comment" cols="100%" rows="4" style="display:none"></textarea></p>
+                        <p>
+                            <script type="text/javascript">
+                                /* <![CDATA[ */
+                                function grin(tag) {
+                                    var myField;
+                                    tag = ' ' + tag + ' ';
+                                    if (document.getElementById('comment') && document.getElementById('comment').type == 'textarea') {
+                                        myField = document.getElementById('comment');
+                                    } else {
+                                        return false;
+                                    }
+                                    if (document.selection) {
+                                        myField.focus();
+                                        sel = document.selection.createRange();
+                                        sel.text = tag;
+                                        myField.focus();
+                                    }
+                                    else if (myField.selectionStart || myField.selectionStart == '0') {
+                                        var startPos = myField.selectionStart;
+                                        var endPos = myField.selectionEnd;
+                                        var cursorPos = endPos;
+                                        myField.value = myField.value.substring(0, startPos)
+                                                + tag
+                                                + myField.value.substring(endPos, myField.value.length);
+                                        cursorPos += tag.length;
+                                        myField.focus();
+                                        myField.selectionStart = cursorPos;
+                                        myField.selectionEnd = cursorPos;
+                                    }
+                                    else {
+                                        myField.value += tag;
+                                        myField.focus();
+                                    }
+                                }
+                                /* ]]> */
+                            </script>
+                            <a href="javascript:grin(':?:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_question.gif" alt=""></a>
+                            <a href="javascript:grin(':razz:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_razz.gif" alt=""></a>
+                            <a href="javascript:grin(':sad:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_sad.gif" alt=""></a>
+                            <a href="javascript:grin(':evil:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_evil.gif" alt=""></a>
+                            <a href="javascript:grin(':!:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_exclaim.gif" alt=""></a>
+                            <a href="javascript:grin(':smile:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_smile.gif" alt=""></a>
+                            <a href="javascript:grin(':oops:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_redface.gif" alt=""></a>
+                            <a href="javascript:grin(':grin:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_biggrin.gif" alt=""></a>
+                            <a href="javascript:grin(':eek:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_surprised.gif" alt=""></a>
+                            <a href="javascript:grin(':shock:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_eek.gif" alt=""></a>
+                            <a href="javascript:grin(':???:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_confused.gif" alt=""></a>
+                            <a href="javascript:grin(':cool:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_cool.gif" alt=""></a>
+                            <a href="javascript:grin(':lol:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_lol.gif" alt=""></a>
+                            <a href="javascript:grin(':mad:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_mad.gif" alt=""></a>
+                            <a href="javascript:grin(':twisted:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_twisted.gif" alt=""></a>
+                            <a href="javascript:grin(':roll:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_rolleyes.gif" alt=""></a>
+                            <a href="javascript:grin(':wink:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_wink.gif" alt=""></a>
+                            <a href="javascript:grin(':idea:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_idea.gif" alt=""></a>
+                            <a href="javascript:grin(':arrow:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_arrow.gif" alt=""></a>
+                            <a href="javascript:grin(':neutral:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_neutral.gif" alt=""></a>
+                            <a href="javascript:grin(':cry:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_cry.gif" alt=""></a>
+                            <a href="javascript:grin(':mrgreen:')"><img src="http://www.mathke.com/wp-includes/images/smilies/icon_mrgreen.gif" alt=""></a>
+                            <br>		</p>
+                        <div class="submitted">
+                            <input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="提交留言">
+                            <input class="reset" name="reset" type="reset" id="reset" tabindex="6" value="重写">
+                            <input type="hidden" name="comment_post_ID" value="2" id="comment_post_ID">
+                            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                        </div>
+                        <div class="picture"><a href="javascript:embedImage();">插入图片</a></div>
+                        <script type="text/javascript">	//Crel+Enter
+                        $(document).keypress(function(e){
+                            if(e.ctrlKey && e.which == 13 || e.which == 10) {
+                                $(".submit").click();
+                                document.body.focus();
+                            } else if (e.shiftKey && e.which==13 || e.which == 10) {
+                                $(".submit").click();
+                            }
+                        })
+                        </script>
+                        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f777b6e7eb"></p><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked" style="margin-left:0px;"><label for="comment_mail_notify">有人回复时邮件通知我</label>    </form>
+
+                    <div class="clear"></div>
+                </div>
+                <i class="lt"></i>
+                <i class="rt"></i>
+            </div>
+            <div id="topcontrol" class="to_top" style="opacity: 1; cursor: pointer; position: fixed; top: 574px; right: 0px;" title="回到顶部"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="gg">
+    <div class="close"><a href="javascript:void(0)" onclick="$('#gg').slideUp('slow');" title="关闭">×</a>
+        <div id="feedb"><a href="http://feed.feedsky.com/mathke" title="欢迎订阅本站" class="image"><img src="http://www.mathke.com/wp-content/themes/HotNewspro/images/feed.gif" /></a></div>
+        <div class="weibo">
+            <a class="sina_t" href="javascript:(function(){window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href)+'&source=bookmark','_blank','width=450,height=400');})()"title="分享到新浪微博" rel="nofollow">新浪微博</a></div>
+        <a class="qq_t" href="javascript:void(0);" onclick="window.open('http://v.t.qq.com/share/share.php?title='+encodeURIComponent(document.title.substring(0,76))+'&url='+encodeURIComponent(location.href)+'&rcontent=','_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes'); " title="分享到腾讯微博" rel="nofollow" >腾讯微博</a>
+    </div>
+    <div class="bulletin">
+        <ul>
+        </ul>
+    </div>
+</div>
+
+<!--#include file="common/sinclude/common.js.html" -->
+<!-- S Footer  这部分是公用的-->
+<!--#include file="common/footer.html" -->
+<!-- E Footer  这部分是公用的-->
+</body>
+</html>

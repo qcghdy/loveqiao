@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS,float|有爱，生活才会精彩</title>
+    <meta name="description" content="有爱，生活才会精彩" />
+    <meta name="keywords" content="爱情,爱,家庭,个人博客" />
+    <base href="<?php echo base_url();?>">
+
+    <!-- Bootstrap Reference Begin-->
+    <link href="<?php echo base_url('static/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
+    <link href="<?php echo base_url('static/css/bootstrap-responsive.min.css');?>" rel="stylesheet" media="screen">
+    <!-- Bootstrap Reference End-->
+
+    <link href="<?php echo base_url('static/css/loveqiao.css');?>" rel="stylesheet" media="screen">
+    <link href="<?php echo base_url('static/css/replybox.css');?>" rel="stylesheet" media="screen">
+
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<!-- S Header  这部分是公用的-->
+<?php include_once('common/header.html'); ?>
+<!-- E Header  这部分是公用的-->
+<div class="container-fluid"  style="margin-top: 40px">
+    <div class="row-fluid">
+        <div class="span6 offset2">
+        <!--Body content-->
+        <div class="banner">
+            <img src="static/images/fiddler.jpg" width="980" height="150" alt="">
+        </div>
+        <!--导航-->
+        <nav class="">
+            <ul class="breadcrumb lq-rebgcolor-breadcrumb">
+                <li>
+                    <a href="http://localhost/loveqiao/" target="_blank">首页</a> <span class="divider">/</span>
+                </li>
+                <li>
+                    <a href="http://localhost/loveqiao/blog" target="_blank">碎碎念</a> <span class="divider">/</span>
+                </li>
+                <li class="active">碎碎碎</li>
+            </ul>
+        </nav>
+
+        <div class="pagination pagination-right">
+            <?php echo  $pager;?>
+        </div>
+        <article>
+            <section>
+                <?php foreach($archives as $archive){?>
+                    <div class="archive-widget archive-widget-list">
+                        <div class="archive" archive="">
+                            <div class="archive-header">
+                                <span class="archive-header-title">
+                                    <?php
+                                        $title = '';
+                                        if(strlen($archive['title']) >= 40){
+                                            //$title = substr_replace($archive['title'], "...", 40);这种方式可能出现截取中文字符串错位导致乱码的情况
+                                            $title = mb_substr(strip_tags($archive['title']),0, 40,'utf-8') . "...";
+                                        }else{
+                                            $title = $archive['title'];
+                                        }
+                                    ?>
+                                    <a href="http://localhost/loveqiao/blog/item?sid=<?php echo $archive['blogid']?>&from=blog&Tag=" title="<?php echo $archive['title']?>" target="_blank"><?php echo $title?></a>
+                                </span>
+                                <div class="bshare-custom archive-header-share">
+                                    <span class="share-to">分享到</span>
+                                    <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                                    <!--<a title="分享到QQ空间" class="bshare-qzone"></a>-->
+                                    <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                                    <a title="分享到人人网" class="bshare-renren"></a>
+                                    <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+                                    <!--<span class="BSHARE_COUNT bshare-share-count">0</span>-->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="archive-body">
+                                <?php echo $archive['brief']; ?>
+                            </div>
+                            <div class="archive-split-line"></div>
+                            <div class="archive-footer">
+                                <span class="archive-time"><?php echo $archive['lastupdatetime']?></span>
+                                <span class="archive-option">
+                                    <a class="btn" style="font-weight: bold;" name="read" href="http://localhost/loveqiao/blog/item?sid=<?php echo $archive['blogid']?>" target="_blank">阅读全文</a>
+                                    <a class="btn" style="font-weight: bold;" name="reply" href="javascript:void(0);">评论(1)</a>
+                                </span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+
+            </section>
+        </article>
+
+        <div class="pagination pagination-right">
+            <?php echo  $pager;?>
+        </div>
+    </div>
+        <div class="span2">
+        <!--Sidebar content-->
+        <div class="hero-unit well  lq-siderbar" style="margin-top:20px;">
+            <h3>子木小乔<small>腾讯微博</small></h3>
+            <iframe frameborder="0" scrolling="no" src="http://show.v.t.qq.com/index.php?c=show&a=index&n=qcghdy&w=302&h=552&fl=2&l=8&o=31&co=0" width="302" height="552"></iframe>
+        </div>
+        <div class="hero-unit well lq-siderbar tab_latest" style="margin-top:20px;">
+            <ul>
+                <li><a href="http://www.mathke.com/calculous/jizhidian.html" rel="bookmark" title="详细阅读 极值点两侧一定单调吗？">极值点两侧一定单调吗？</a></li>
+                <li><a href="http://www.mathke.com/math-fun/math-t-shirt.html" rel="bookmark" title="详细阅读 数学考试专用装备——小抄T恤">数学考试专用装备——小抄</a></li>
+                <li><a href="http://www.mathke.com/kaoyan/kaoyan-wenfen-biaogefa.html" rel="bookmark" title="详细阅读 关于微分算子法和分部积分表格法">关于微分算子法和分部积分表格法</a></li>
+                <li><a href="http://www.mathke.com/calculous/pieepi.html" rel="bookmark" title="详细阅读 如何证明pi的e次方小于e的pi次方">如何证明pi的e次方小于e的pi次方</a></li>
+                <li><a href="http://www.mathke.com/calculous/calculus-q-a.html" rel="bookmark" title="详细阅读 （贴吧问题）一个不定积分求解">（贴吧问题）一个不定积分求解</a></li>
+                <li><a href="http://www.mathke.com/history/cauchy.html" rel="bookmark" title="详细阅读 数学家柯西">数学家柯西</a></li>
+                <li><a href="http://www.mathke.com/software/math-soft-logo.html" rel="bookmark" title="详细阅读 数学软件LOGO">数学软件LOGO</a></li>
+                <li><a href="http://www.mathke.com/linear-algebra/xd-lt.html" rel="bookmark" title="详细阅读 设A为n阶方阵，且满足AA^T =E和|A|&amp;lt;0，证明行列式|E+A|=0">设A为n阶方阵，且满足AA^T =E和</a></li>
+                <li><a href="http://www.mathke.com/math-fun/funny-math-song.html" rel="bookmark" title="详细阅读 拉格朗日，傅立叶旁，我凝视你凹函数般的脸庞">拉格朗日，傅立叶旁，我凝视你凹函数</a></li>
+                <li><a href="http://www.mathke.com/calculous/limit.html" rel="bookmark" title="详细阅读 求极限方法总结">求极限方法总结</a></li>
+            </ul>
+        </div>
+        <div class="hero-unit well  lq-siderbar" style="margin-top:20px;">
+            <div class="ads">
+                <a><img src=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="sign-in-model">
+    <div class="modal-header dialog_header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="myModalLabel1">登录</h4>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="lq-control-label-resize-width" for="username-input-login">账号</label>
+                <div class="lq-controls-resize-margin-left">
+                    <input type="text" class="input-xlarge" id="username-input-login">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="lq-control-label-resize-width" for="password-input-login">密码</label>
+                <div class="lq-controls-resize-margin-left">
+                    <input type="password" class="input-xlarge" id="password-input-login">
+                </div>
+            </div>
+            <div class="" id="login-state-tips">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">取消</button>
+        <button class="btn btn-primary" id="login-button-submit">确定</button>
+    </div>
+</div>
+
+<!-- S login  这部分是公用的-->
+<?php include_once('common/login.html'); ?>
+<!-- S login  这部分是公用的-->
+
+<!-- S Footer  这部分是公用的-->
+<?php include_once('common/footer.html'); ?>
+<!-- E Footer  这部分是公用的-->
+
+<!-- Bootstrap Reference Begin-->
+<!--script src="http://code.jquery.com/jquery-latest.js"></script-->
+<script src="<?php echo base_url('static/js/jquery.js?v2.3.0');?>"></script>
+<script src="<?php echo base_url('static/js/bootstrap.min.js');?>"></script>
+<!-- Bootstrap Reference End-->
+
+
+
+<!--bShare Begin-->
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+<!--bShare End-->
+
+<script src="<?php echo base_url('static/js/jquery.scrolltotop.js');?>"></script>
+
+<script src="<?php echo base_url('static/js/common.js');?>"></script>
+<script src="<?php echo base_url('static/js/blog.js?20111');?>"></script>
+
+</body>
+</html>

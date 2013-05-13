@@ -1,0 +1,219 @@
+body {
+    /*font-family: "Hiragino Sans GB","Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",Arial,sans-serif;*/
+    /*font-size: 14px;*/
+    line-height: 20px;
+    color: #333333;
+}
+
+.admin{
+    margin-top: 50px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    border-bottom-color: #aaa;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    background: #f6f6f6;
+}
+
+#nav-tabs {
+
+}
+
+#nav-tabs ul {
+    margin: 0px;
+}
+
+#nav-tabs ul li {
+    text-align: center;
+}
+
+#nav-tabs ul li .icon-big {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background: url(../images/icons.png) no-repeat;
+    position: relative;
+}
+
+#nav-tabs ul li a {
+    color: #666;
+}
+
+#nav-tabs ul li a #icon-posts {
+    background-position: -50px 0;
+}
+#nav-tabs ul li a #icon-users {
+    background-position: 0 -50px;
+}
+
+#nav-tabs ul li a #icon-settings {
+    background-position: 0 -100px;
+}
+
+#nav-tabs ul li a #icon-tools {
+    background-position: 0 -150px;
+}
+
+#nav-tabs ul li a #icon-statistics {
+    background-position: 0px -200px;
+}
+
+#nav-tabs ul li p {
+    font-size: 12px;
+    text-shadow: 0 1px 1px #fff;
+    margin-top: -7px;
+    letter-spacing: 1px;
+}
+
+/*加这个样式的作用：设置右边显示区域的长度和最小宽度。设置右边div的矩形样式*/
+.tab-content-right {
+    /*max-width: 1000px;*/
+    min-height: 425px;
+    border: 1px solid #cccccc;
+    border-left:none;
+    color: #444444;
+    /*margin: 8px 0 18px 90px;*/
+    padding: 18px 50px 18px 50px;
+    background: #ffffff;
+
+    /*先使四个角的半径都为6px*/
+    /*-webkit-border-radius: 6px;*/
+    /*-moz-border-radius: 6px;*/
+    /*border-radius: 6px;*/
+    /*左上角半径为0*/
+    /*-webkit-border-top-left-radius: 0;*/
+    /*-moz-border-top-left-radius: 0;*/
+    /*border-top-left-radius: 0;*/
+    /*左下角半径为0*/
+    /*-webkit-border-bottom-left-radius: 0;*/
+    /*-moz-border-bottom-left-radius: 0;*/
+    /*border-bottom-left-radius: 0;*/
+
+    /*-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+    /*-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+}
+
+.tab-content-right h3 {
+    line-height: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.tab-content-right .admin-operation-header h3 {
+    line-height: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.tab-content-right .admin-operation-body {
+    margin-top: 20px;
+}
+
+#users .basic-info,  #settings .basic-info{
+    padding-top: 20px;
+}
+
+#users .basic-info-operation, #settings .basic-info-operation{
+    padding-left: 180px
+}
+
+#users .avatar, #settings .avatar{
+    border-radius: 4px;
+    padding: 2px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #aaa;
+    border-bottom-color: #999;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.is0 {
+    background: url(../images/progressImg1.png) no-repeat 0px 0px;
+    width: 138px;
+    height: 7px;
+    margin: 7px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.is10 {
+    background-position: 0px -7px
+}
+.is20 {
+    background-position: 0px -14px
+}
+.is30 {
+    background-position: 0px -21px
+}
+.is40 {
+    background-position: 0px -28px
+}
+.is50 {
+    background-position: 0px -35px
+}
+.is60 {
+    background-position: 0px -42px
+}
+.is70 {
+    background-position: 0px -49px
+}
+.is80 {
+    background-position: 0px -56px
+}
+.is90 {
+    background-position: 0px -63px
+}
+.is100 {
+    background-position: 0px -70px
+}
+
+
+table.table-condition-search tr td span {
+    width: 100px;
+    margin-right: 20px;
+}
+
+table.table-content-center tr td, table.table-content-center tr th {
+    text-align: center;
+    white-space: nowrap;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.admin-blogs-options {
+    margin: 0px 5px;
+}
+
+
+.delete-confirm-model-alert {
+    margin: 10px 30px;
+}
+
+
+.common-model {
+    background-color: #ffffff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: none;
+}

@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>有爱，生活才会精彩</title>
+    <meta name="description" content="有爱，生活才会精彩" />
+    <meta name="keywords" content="爱情,爱,家庭,个人博客" />
+    <base href="<?php echo base_url();?>">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="static/css/home.css" />
+    <link rel="stylesheet" href="static/css/css.css" />
+    <link rel="stylesheet" href="static/css/replybox.css" />
+    <link rel="stylesheet" href="static/styles/1-gray.css" type="text/css" />
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"/>
+
+    <style type="text/css">
+        .banner img{margin: 0 0 5px 0;}
+
+        /*input[type='text']{*/
+            /*width:150px;*/
+            /*display:block;*/
+            /*margin-bottom:10px;*/
+            /*background-color:yellow;*/
+            /*font-family: Verdana, Arial;*/
+        /*}*/
+
+        /*input[type="button"]*/
+        /*{*/
+            /*width:120px;*/
+            /*margin-left:35px;*/
+            /*display:block;*/
+            /*font-family: Verdana, Arial;*/
+        /*}*/
+
+        .box1 {
+            background-color: #f0f0f0;
+            width: 533px;
+            height: 50px;
+            margin: 0 auto 15px auto;
+            padding: 30px;
+            border: 1px solid #d7d7d7;
+
+            -moz-border-radius: 11px;
+            -webkit-border-radius: 11px;
+            border-radius: 11px;
+            behavior: url(border-radius.htc);
+        }
+        .rel {
+            margin: 50px 0 0 33px;
+            padding: 25px;
+            position: relative;
+            z-index: inherit;
+            zoom: 1; /* For IE6 */
+        }
+
+        .to_top {
+            background: url(static/images/gototop-bg.png) no-repeat 0 0;
+            cursor: pointer;
+            height: 41px;
+            width: 52px;
+        }
+
+        #respond_box {
+            position: relative;
+            background: white;
+            width: 710px;
+            margin: 10px 0 0 0;
+            padding: 10px;
+        }
+        .set_avatar {
+            background: url(gray/bg.png) -369px -73px;
+        }
+
+        #commentform #author {
+            background: white url(static/images/login.png) no-repeat 0 -37px;
+            width: 210px;
+            padding: 4px 3px 4px 25px;
+            border: 1px solid #CCC;
+        }
+
+        #commentform #email {
+            background: white url(static/images/login.png) no-repeat 0 -18px;
+            width: 210px;
+            padding: 4px 3px 4px 25px;
+            border: 1px solid #CCC;
+        }
+        #commentform #url {
+            background: white url(static/images/login.png) no-repeat 0 2px;
+            width: 210px;
+            padding: 4px 3px 4px 25px;
+            border: 1px solid #CCC;
+        }
+    </style>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <!-- S Header  这部分是公用的-->
+    <!--222222222222222222#include file="common/header.html"2222222222222222222 -->
+    <?php include_once('common/header.html'); ?>
+    <!-- E Header  这部分是公用的-->
+
+    <div class="banner">
+        <img src="static/images/fiddler.jpg" width="980" height="150" alt="">
+    </div>
+    <div id="content">
+        <!-- menu -->
+        <div id="map">
+            <div class="browse">现在位置 ＞<a title="返回首页" href="http://www.mathke.com/">首页</a> ＞
+
+                教学心得					</div>
+            <div id="feed"><a href="http://feed.feedsky.com/mathke" title="RSS">RSS</a></div>
+        </div>
+        <!-- end: menu -->
+
+        <input type="button" value="点击" id="button3">
+        <div class="navigation">
+            <div class="pagination"><span class="current">1</span>
+                <a href="http://www.mathke.com/category/tips/page/2" class="inactive">2</a>
+                <a href="http://www.mathke.com/category/tips/page/3" class="inactive">3</a>
+                <a href="http://www.mathke.com/category/tips/page/4" class="inactive">4</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- end: navigation -->
+
+        <!-- archive_box -->
+        <div class="entry_box">
+            <span class="comment_a"><a href="http://www.mathke.com/tips/xuefenzhi.html#respond" title="《武汉理工大学和武汉大学试行按学分制收费》上的评论">0℃ </a></span>
+            <div class="archive_box">
+                <!-- end: archive_title_box -->
+                <div class="archive_title_box">
+                    <!-- 分类图标 -->
+                    <div class="ico"></div>
+                    <!-- end: 分类图标 -->
+                    <div class="archive_title">
+                        <h3><a href="http://www.mathke.com/tips/xuefenzhi.html" rel="bookmark" title="详细阅读 武汉理工大学和武汉大学试行按学分制收费">武汉理工大学和武汉大学试行按学分制收费</a></h3>
+                    </div>
+                    <div class="archive_info">
+                        <span class="date">2011年10月15日</span>
+                        <span class="category"> ⁄ <a href="http://www.mathke.com/category/tips" title="查看 教学心得 中的全部文章" rel="category tag">教学心得</a></span>
+                        <span class="edit"></span>
+                    </div>
+                </div>
+                <!-- end: archive_title_box -->
+                <!-- thumbnail -->
+                <div class="thumbnail_box">
+                    <div class="thumbnail_t">
+                    </div>
+                    <!-- 截图 -->
+                    <div class="thumbnail">
+                        <a href="http://www.mathke.com/tips/xuefenzhi.html" rel="bookmark" title="武汉理工大学和武汉大学试行按学分制收费">
+                            <img class="home-thumb" src="http://www.mathke.com/wp-content/themes/HotNewspro/images/random/15.jpg" width="140px" height="100px" alt="武汉理工大学和武汉大学试行按学分制收费" original="http://www.mathke.com/wp-content/themes/HotNewspro/images/random/15.jpg" style="opacity: 1;">
+                        </a>
+                    </div>
+                    <span class="postdate">2011年10月15日</span>
+                </div>
+                <div class="archive">
+                    据了解，当前国内高校主要有两种收费模式：一是按学分进行学籍管理，按学年制收费；第二种便是按学分收费，目前多数高校都是按学年制收费，而学分制收费近几年开始在国内部分高校试行。去年，武大在我省率先尝试在新生中推行学分制收费，至今秋开学，武大和武汉理工大学已被正式批准在我省实行学分制收费。
+                    据武大教务部负责人介绍，与学年制收费相比，学分制收费由过去的“按年交学费，按课表上课”改变为“按学分付费，可自由选课”，这给予了学生更大的学习自主权，同时也能让他们更直观感受到学习的成本压力，促使...			</div>
+                <div class="clear"></div>
+                <span class="posttag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.mathke.com/tag/%e6%95%99%e5%ad%a6%e6%94%b9%e9%9d%a9" rel="tag">教学改革</a></span><span class="archive_more"><a href="http://www.mathke.com/tips/xuefenzhi.html" title="详细阅读 武汉理工大学和武汉大学试行按学分制收费" rel="bookmark" class="title">阅读全文</a></span>
+                <div class="clear"></div>
+            </div>
+            <!-- end: archive_box -->
+            <i class="lt"></i>
+            <i class="rt"></i>
+        </div>
+
+        <div class="entry_box">
+            <span class="comment_a"><a href="http://www.mathke.com/tips/lflch-1.html#respond" title="《Two访Two创记录（一）》上的评论">0℃ </a></span>
+            <div class="archive_box">
+                <!-- end: archive_title_box -->
+                <div class="archive_title_box">
+                    <!-- 分类图标 -->
+                    <div class="ico"></div>
+                    <!-- end: 分类图标 -->
+                    <div class="archive_title">
+                        <h3><a href="http://www.mathke.com/tips/lflch-1.html" rel="bookmark" title="详细阅读 Two访Two创记录（一）">Two访Two创记录（一）</a></h3>
+                    </div>
+                    <div class="archive_info">
+                        <span class="date">2011年10月13日</span>
+                        <span class="category"> ⁄ <a href="http://www.mathke.com/category/tips" title="查看 教学心得 中的全部文章" rel="category tag">教学心得</a></span>
+                        <span class="edit"></span>
+                    </div>
+                </div>
+                <!-- end: archive_title_box -->
+                <!-- thumbnail -->
+                <div class="thumbnail_box">
+                    <div class="thumbnail_t">
+                    </div>
+                    <!-- 截图 -->
+                    <div class="thumbnail">
+                        <a href="http://www.mathke.com/tips/lflch-1.html" rel="bookmark" title="Two访Two创记录（一）">
+                            <img class="home-thumb" src="http://www.mathke.com/wp-content/themes/HotNewspro/images/random/14.jpg" width="140px" height="100px" alt="Two访Two创记录（一）" original="http://www.mathke.com/wp-content/themes/HotNewspro/images/random/14.jpg" style="opacity: 1;">
+                        </a>
+                    </div>
+                    <span class="postdate">2011年10月13日</span>
+                </div>
+                <div class="archive">
+                    一、大学上了三年的课一个教授也没上过。
+                    好，下次找个教授上一下；那个翠花，上教授。
+                    二、理论课太多了，感觉不实用。以后又不会用到。
+                    海水不可瓢舀，人不可斗量。以后会有人用到的。七分是基础，三分可养家。
+                    三、课程相关的软件太少了。
+                    这个，可能学校更喜欢占有肉体，不喜欢拥有灵魂。买硬件看得见摸得着，心里敞亮。
+                    未完，待续
+                    仅供娱乐，非真实属性
+                </div>
+                <div class="clear"></div>
+                <span class="posttag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.mathke.com/tag/%e6%95%99%e5%ad%a6" rel="tag">教学</a></span><span class="archive_more"><a href="http://www.mathke.com/tips/lflch-1.html" title="详细阅读 Two访Two创记录（一）" rel="bookmark" class="title">阅读全文</a></span>
+                <div class="clear"></div>
+            </div>
+            <!-- end: archive_box -->
+            <i class="lt"></i>
+            <i class="rt"></i>
+        </div>
+        <input type="button" value="点击" id="button2">
+        <script>
+            function getInfo(){
+                var s = "";
+                s += " 网页可见区域宽body.clientWidth："+ document.body.clientWidth;
+                s += "\r\n 网页可见区域高body.clientHeight："+ document.body.clientHeight;
+                s += "\r\n 网页可见区域宽body.offsetWidth："+ document.body.offsetWidth + " (包括边线和滚动条的宽)";
+                s += "\r\n 网页可见区域高body.offsetHeight："+ document.body.offsetHeight + " (包括边线的宽)";
+                s += "\r\n 网页正文全文宽body.scrollWidth："+ document.body.scrollWidth;
+                s += "\r\n 网页正文全文高body.scrollHeight："+ document.body.scrollHeight;
+                s += "\r\n 网页被卷去的高(ff)body.scrollTop："+ document.body.scrollTop;
+                s += "\r\n 网页被卷去的高(ie)documentElement.scrollTop："+ document.documentElement.scrollTop;
+                s += "\r\n 网页被卷去的左body.scrollLeft："+ document.body.scrollLeft;
+                s += "\r\n 网页正文部分上window.screenTop："+ window.screenTop;
+                s += "\r\n 网页正文部分左window.screenLeft;："+ window.screenLeft;
+                s += "\r\n 屏幕分辨率的高window.screen.height："+ window.screen.height;
+                s += "\r\n 屏幕分辨率的宽window.screen.width："+ window.screen.width;
+                s += "\r\n 屏幕可用工作区高度window.screen.availHeight："+ window.screen.availHeight;
+                s += "\r\n 屏幕可用工作区宽度window.screen.availWidth："+ window.screen.availWidth;
+                s += "\r\n 你的屏幕设置是window.screen.colorDepth "+ window.screen.colorDepth +" 位彩色";
+                s += "\r\n 你的屏幕设置window.screen.deviceXDPI "+ window.screen.deviceXDPI +" 像素/英寸";
+                return s;
+            }
+
+            document.getElementById("button2").onclick = function() {
+                //document.write(getInfo());
+                console.log(getInfo());
+            }
+            document.getElementById("button3").onclick = function() {
+                //document.write(getInfo());
+                console.log(getInfo());
+            }
+
+        </script>
+
+        <div class="entry_box">
+            <span class="comment_a"><a href="http://www.mathke.com/tips/q-and-a.html#respond" title="《问与答》上的评论">0℃ </a></span>
+            <div class="archive_box">
+                <!-- end: archive_title_box -->
+                <div class="archive_title_box">
+                    <!-- 分类图标 -->
+                    <div class="ico"></div>
+                    <!-- end: 分类图标 -->
+                    <div class="archive_title">
+                        <h3><a href="http://www.mathke.com/tips/q-and-a.html" rel="bookmark" title="详细阅读 问与答">问与答</a></h3>
+                    </div>
+                    <div class="archive_info">
+                        <span class="date">2011年09月06日</span>
+                        <span class="category"> ⁄ <a href="http://www.mathke.com/category/tips" title="查看 教学心得 中的全部文章" rel="category tag">教学心得</a></span>
+                        <span class="edit"></span>
+                    </div>
+                </div>
+                <!-- end: archive_title_box -->
+                <!-- thumbnail -->
+                <div class="thumbnail_box">
+                    <div class="thumbnail_t">
+                    </div>
+                    <!-- 截图 -->
+                    <div class="thumbnail">
+                        <a href="http://www.mathke.com/tips/q-and-a.html" rel="bookmark" title="问与答">
+                            <img class="home-thumb" width="140px" height="100px" alt="问与答" original="http://www.mathke.com/wp-content/themes/HotNewspro/images/random/9.jpg" style="display: block;" src="http://www.mathke.com/wp-content/themes/HotNewspro/images/random/9.jpg">
+                        </a>
+                    </div>
+                    <span class="postdate">2011年09月06日</span>
+                </div>
+                <div class="archive">
+                    1、问：年复一年的教高等数学，不烦吗？
+                    答：对不同的牛弹琴，总会找到知音的。
+                    2、问：关于语速快的问题？
+                    答：很多人说过，但不认为是毛病，结巴才是毛病。讲课需要的是激情，语调抑扬顿挫，否则语速慢的听起来是催眠曲，我语速快至少还是义勇军进行曲。
+                    3、问：关于我们的将来?
+                    答：抱着必死的态度，有着必胜的决心。
+                    4、问：路上老太太摔倒了，要不要扶？
+                    答：狗太多了，吕洞宾都不够了。遇到一定要扶，教育坏掉了，这个国家和民族也就没希望了。
+                    5、问：关于抵制Japan货的问题。
+                    答：师夷长技以制夷，师夷长...			</div>
+                <div class="clear"></div>
+                <span class="posttag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.mathke.com/tag/%e7%ad%94%e4%b8%8e%e9%97%ae" rel="tag">答与问</a></span><span class="archive_more"><a href="http://www.mathke.com/tips/q-and-a.html" title="详细阅读 问与答" rel="bookmark" class="title">阅读全文</a></span>
+                <div class="clear"></div>
+            </div>
+            <!-- end: archive_box -->
+            <i class="lt"></i>
+            <i class="rt"></i>
+        </div>
+
+        <!-- navigation -->
+        <div class="navigation_b">
+            <div class="pagination">
+                <span class="current">1</span>
+                <a href="http://www.mathke.com/category/tips/page/2" class="inactive">2</a>
+                <a href="http://www.mathke.com/category/tips/page/3" class="inactive">3</a>
+                <a href="http://www.mathke.com/category/tips/page/4" class="inactive">4</a>
+            </div>
+        </div>
+        <!-- end: navigation -->
+        <div class="clear"></div>
+    </div>
+    <div id="sidebar">
+
+        <div id="tabs">
+            <div class="box_top">
+                <i class="rt"></i>
+            </div>
+            <ul class="htotabs">
+                <li class="widget1"><a href="#tab-widget1" class="selected">最新文章</a></li>
+                <li class="widget2"><a href="#tab-widget2">本月排行</a></li>
+                <li class="widget3"><a href="#tab-widget3">分类目录</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="tab-inside">
+                <ul id="tab-widget1" style="display: block;">
+                    <div class="tab_latest">
+                        <ul>
+                            <li><a href="http://www.mathke.com/calculous/jizhidian.html" rel="bookmark" title="详细阅读 极值点两侧一定单调吗？">极值点两侧一定单调吗？</a></li>
+                            <li><a href="http://www.mathke.com/math-fun/math-t-shirt.html" rel="bookmark" title="详细阅读 数学考试专用装备——小抄T恤">数学考试专用装备——小抄</a></li>
+                            <li><a href="http://www.mathke.com/kaoyan/kaoyan-wenfen-biaogefa.html" rel="bookmark" title="详细阅读 关于微分算子法和分部积分表格法">关于微分算子法和分部积分表格法</a></li>
+                            <li><a href="http://www.mathke.com/calculous/pieepi.html" rel="bookmark" title="详细阅读 如何证明pi的e次方小于e的pi次方">如何证明pi的e次方小于e的pi次方</a></li>
+                            <li><a href="http://www.mathke.com/calculous/calculus-q-a.html" rel="bookmark" title="详细阅读 （贴吧问题）一个不定积分求解">（贴吧问题）一个不定积分求解</a></li>
+                            <li><a href="http://www.mathke.com/history/cauchy.html" rel="bookmark" title="详细阅读 数学家柯西">数学家柯西</a></li>
+                            <li><a href="http://www.mathke.com/software/math-soft-logo.html" rel="bookmark" title="详细阅读 数学软件LOGO">数学软件LOGO</a></li>
+                            <li><a href="http://www.mathke.com/linear-algebra/xd-lt.html" rel="bookmark" title="详细阅读 设A为n阶方阵，且满足AA^T =E和|A|&amp;lt;0，证明行列式|E+A|=0">设A为n阶方阵，且满足AA^T =E和</a></li>
+                            <li><a href="http://www.mathke.com/math-fun/funny-math-song.html" rel="bookmark" title="详细阅读 拉格朗日，傅立叶旁，我凝视你凹函数般的脸庞">拉格朗日，傅立叶旁，我凝视你凹函数</a></li>
+                            <li><a href="http://www.mathke.com/calculous/limit.html" rel="bookmark" title="详细阅读 求极限方法总结">求极限方法总结</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </ul>
+                <ul id="tab-widget2" style="display: none;">
+                    <div class="tab_latest">
+                        <ul>
+                        </ul>
+                    </div>
+                </ul>
+                <ul id="tab-widget3" style="display: none;">
+                    <div class="categories_c">
+                        <ul>	<li class="cat-item cat-item-52"><a href="http://www.mathke.com/category/book" title="查看 图书推荐 下的所有文章">图书推荐</a>
+                        </li>
+                            <li class="cat-item cat-item-1 current-cat"><a href="http://www.mathke.com/category/tips" title="查看 教学心得 下的所有文章">教学心得</a>
+                            </li>
+                            <li class="cat-item cat-item-4"><a href="http://www.mathke.com/category/shumo" title="查看 数学建模 下的所有文章">数学建模</a>
+                            </li>
+                            <li class="cat-item cat-item-5"><a href="http://www.mathke.com/category/history" title="查看 数学简史 下的所有文章">数学简史</a>
+                            </li>
+                            <li class="cat-item cat-item-6"><a href="http://www.mathke.com/category/software" title="查看 数学软件 下的所有文章">数学软件</a>
+                            </li>
+                            <li class="cat-item cat-item-7"><a href="http://www.mathke.com/category/probability-and-statistics" title="查看 概率统计 下的所有文章">概率统计</a>
+                            </li>
+                            <li class="cat-item cat-item-8"><a href="http://www.mathke.com/category/biostatistics" title="查看 生物统计学 下的所有文章">生物统计学</a>
+                            </li>
+                            <li class="cat-item cat-item-9"><a href="http://www.mathke.com/category/linear-algebra" title="查看 线性代数 下的所有文章">线性代数</a>
+                            </li>
+                            <li class="cat-item cat-item-58"><a href="http://www.mathke.com/category/kaoyan" title="查看 考研数学 下的所有文章">考研数学</a>
+                            </li>
+                            <li class="cat-item cat-item-10"><a href="http://www.mathke.com/category/math-fun" title="查看 趣味数学 下的所有文章">趣味数学</a>
+                            </li>
+                            <li class="cat-item cat-item-3"><a href="http://www.mathke.com/category/calculous" title="微积分">高等数学</a>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="box-bottom">
+            <i class="lb"></i>
+            <i class="rb"></i>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery( '.htotabs').each(function(){
+                    jQuery(this).children( 'li').children( 'a:first').addClass( 'selected' ); // Add .selected class to first tab on load
+                });
+                jQuery( '.tab-inside > *').hide();
+                jQuery( '.tab-inside > *:first-child').show();
+                jQuery( '.htotabs li a').click(function(evt){ // Init Click funtion on Tabs
+                    var clicked_tab_ref = jQuery(this).attr( 'href' ); // Strore Href value
+                    jQuery(this).parent().parent().children( 'li').children( 'a').removeClass( 'selected' ); //Remove selected from all tabs
+                    jQuery(this).addClass( 'selected' );
+                    jQuery(this).parent().parent().parent().children( '.tab-inside').children( '*').hide();
+                    jQuery( '.tab-inside ' + clicked_tab_ref).fadeIn(500);
+                    evt.preventDefault();
+                })
+            })
+        </script>
+        <div class="widget">
+        </div>
+
+        <div class="widget">
+        </div>
+
+        <div class="widget">
+            <div class="random_r">
+                <h3>随便看看</h3>
+                <div class="box_r">
+                    <ul><ul class="random-post-link">
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/math-fun/welcome.html" title="欢迎来到麦思客！">欢迎来到麦思客！</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/math-fun/dead-pixel.html" title="趣题：哪个像素点坏了？">趣题：哪个像素点坏了？</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/software/matlab-command.html" title="Matlab常用的操作命令和快捷键介绍">Matlab常用的操作命令和快捷键介绍</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/history/first-shuxueweiji.html" title="第一次数学危机">第一次数学危机</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/calculous/ues-wolframalpha-solves-calculus.html" title="利用Wolfr|amAlpha求解微积分题目">利用Wolfr|amAlpha求解微积分题目</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/shumo/shangrao-2009.html" title="2009湘、赣、鄂、闽、豫数学建模会议">2009湘、赣、鄂、闽、豫数学建模会</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/calculous/top-web-tools-for-college-students.html" title="大学生必备的十大网络工具">大学生必备的十大网络工具</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/math-fun/mathematicians-quarrel.html" title="数学家的争吵">数学家的争吵</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/tips/goodbye-2008-and-happy-new-year-2009.html" title="2008年总结及2009年展望">2008年总结及2009年展望</a>
+                        </li>
+                        <li class="random-post-link">
+                            <a href="http://www.mathke.com/tips/happy-new-year-2010.html" title="新年快乐">新年快乐</a>
+                        </li>
+                    </ul>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="box-bottom">
+                    <i class="lb"></i>
+                    <i class="rb"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget">
+            <button id="button1">点击</button>
+            <div id="box" style="width:200px; height:180px; margin-top:1em; overflow:auto;">
+                <img src="static/images/mm1.jpg" width="260" height="200" id="img"/>
+            </div>
+            <script type="text/javascript">
+                document.getElementById("button1").onclick = function() {
+                    var oBox = document.getElementById("box");
+                    var oImg = document.getElementById("img");
+                    var oParent = oImg.offsetParent;
+                    console.log("oBox.scrollWidth: " + oBox.scrollWidth + ",oBox.scrollHeight: "
+                            + oBox.scrollHeight+",oBox.scrollTop: " + oBox.scrollTop
+                            + ",oBox.scrollLeft: " + oBox.scrollLeft);
+                    console.log("oImg.scrollWidth: " + oImg.scrollWidth + ",oImg.scrollHeight: "
+                            + oImg.scrollHeight+",oImg.scrollTop: " + oImg.scrollTop
+                            + ",oImg.scrollLeft: " + oImg.scrollLeft);
+                    console.log("oImg.offsetTop: " + oImg.offsetTop + ",oImg.offsetLeft: "
+                            + oImg.offsetLeft+",oImg.offsetHeight: " + oImg.offsetHeight
+                            + ",oImg.offsetWidth: " + oImg.offsetWidth);
+                    console.log("oBox.offsetTop: " + oBox.offsetTop + ",oBox.offsetLeft: "
+                            + oBox.offsetLeft+",oBox.offsetHeight: " + oBox.offsetHeight
+                            + ",oBox.offsetWidth: " + oBox.offsetWidth);
+                    console.log("oParent.offsetTop: " + oParent.offsetTop + ",oParent.offsetLeft: "
+                            + oParent.offsetLeft+",oParent.offsetHeight: " + oParent.offsetHeight
+                            + ",oParent.offsetWidth: " + oParent.offsetWidth);
+                };
+            </script>
+
+        </div>
+
+        <div class="widget">
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+<div id="gg">
+    <div class="close"><a href="javascript:void(0)" onclick="$('#gg').slideUp('slow');" title="关闭">×</a>
+        <div id="feedb"><a href="http://feed.feedsky.com/mathke" title="欢迎订阅本站" class="image"><img src="http://www.mathke.com/wp-content/themes/HotNewspro/images/feed.gif" /></a></div>
+        <div class="weibo">
+            <a class="sina_t" href="javascript:(function(){window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href)+'&source=bookmark','_blank','width=450,height=400');})()"title="分享到新浪微博" rel="nofollow">新浪微博</a></div>
+        <a class="qq_t" href="javascript:void(0);" onclick="window.open('http://v.t.qq.com/share/share.php?title='+encodeURIComponent(document.title.substring(0,76))+'&url='+encodeURIComponent(location.href)+'&rcontent=','_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes'); " title="分享到腾讯微博" rel="nofollow" >腾讯微博</a>
+    </div>
+    <div class="bulletin">
+        <ul>
+        </ul>
+    </div>
+</div>
+
+<!--#include file="common/sinclude/common.js.html" -->
+
+<!-- S Footer  这部分是公用的-->
+<!--#include file="common/footer.html" -->
+<!-- E Footer  这部分是公用的-->
+</body>
+</html>

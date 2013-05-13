@@ -1,0 +1,354 @@
+/***********************************************************
+ *  my project css
+ *
+ *
+ *
+ *
+*************************************************************/
+
+body{
+    padding-top:40px;
+    /*font-family:'Microsoft YaHei',Tahoma, Helvetica, Arial, sans-serif;*/
+    font: 400 14px/150% 'Microsoft YaHei',Tahoma, Helvetica, Arial, sans-serif;
+    /*color: #424242;*/
+    color: #333333;
+    /*background: url(../images/background.jpg) repeat;*/
+}
+
+
+/***********login-begin************************************/
+
+.form-horizontal .lq-control-label-resize-width {
+    float:left;
+    width:125px;
+    padding-top:5px;
+    text-align:right;
+}
+
+.form-horizontal .lq-controls-resize-margin-left {
+    *display:inline-block;
+    *padding-left:20px;
+    margin-left:150px;
+    *margin-left:0;
+}
+
+.form-horizontal .lq-login-state-tips {
+    margin:0px 50px;
+    text-align: center;
+}
+
+.ribbon {
+    background-color: #808080;
+    height: 2px;
+    margin: 40px 0px 5px 0px;
+}
+
+footer {
+    padding: 20px 0px;
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+footer p , footer address {
+    font-size: 14px;
+    color: #777;
+}
+
+footer a {
+    margin: 0 2em;
+    color: #777;
+    text-decoration: none;
+}
+/***********login-end************************************/
+
+/*首页中列表控件*/
+.list-widget {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+    position: relative;
+    border-top: 1px solid #eee;
+    background: #fff;
+    /*margin-left: 20px;*/
+
+    width: 24.5%;
+    float: left;
+    margin: 3% 0 0 5%;
+}
+
+.list-widget .list-head {
+    margin-left: 60px;
+}
+.list-widget .avatar {
+    margin-top: 8px;
+    border-radius: 40px;
+}
+.list-widget .list-meta {
+    color: #777;
+    margin-top: 0;
+    font-size: 13px;
+}
+.list-widget h3 {
+    font-weight: normal;
+    color: #DD390D;
+}
+
+.list-widget ul {
+    list-style: none;
+    margin: 15px -15px 0;
+    padding: 0 10px;
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.list-widget ul li {
+    margin: 10px 10px;
+    font-size: 14px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.list-widget ul li>div {
+    margin-left: 30px;
+}
+
+.list-widget .fav {
+    background-position: 0 0;
+    height: 16px;
+    width: 16px;
+    margin: 2px 0 0 3px;
+    float: left;
+    vertical-align: text-top;
+}
+lq-small-icon {
+    max-width: 100%;
+    float: left;
+    margin: 4px 10px 0 0;
+    height: auto;
+    border: 0;
+    float: left;
+    vertical-align: text-top;
+}
+
+/****************
+ *
+ */
+
+.banner {
+    margin: 20px 0px;
+}
+
+.lq-siderbar {
+    width:300px;
+}
+
+.lq-rebgcolor-breadcrumb{
+    background-color: gainsboro;
+}
+
+/*************************************
+ *
+ */
+.clear {
+    clear: both;
+}
+
+/*************************************
+ *
+ */
+
+.archive-widget {
+    /*background:antiquewhite;*/
+    background:#ffffff;
+    border: 1px solid #e3e3e3;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    line-height: 30px;
+    min-height: 20px;
+    padding: 19px;
+
+    border: 1px solid #cccccc;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+    margin-bottom: 20px;
+}
+
+.archive-widget-list {
+    background:antiquewhite;
+}
+
+/*自定义的分割线*/
+.archive-split-line {
+    background-color: rgb(241, 218, 218);
+    height: 2px;
+    margin: 5px -2px 7px -2px;
+}
+
+.archive-header {
+    margin: 5px 0px;
+    border-bottom: 2px solid rgb(241, 218, 218);
+}
+
+.archive-header .archive-date {
+    float: left;
+    width: 50px;
+    margin: 2px 5px 0px 0px;
+    background: url(../images/date_bg.gif) no-repeat;
+}
+
+.archive-header .archive-date .month {
+    height: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+}
+
+.archive-header .archive-date .day {
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.archive-header .archive-header-title {
+    line-height: 40px;
+    font-weight:bold;
+}
+
+.archive-header .archive-header-title h3 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0px 0px;
+    font-family:"微软雅黑";
+}
+
+.archive-header .archive-header-title p {
+    color: #666;
+    line-height: 26px;
+}
+
+.archive-header .archive-header-title p span {
+    margin-right: 15px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.archive-header .archive-header-share {
+    float: right;
+    margin-top: 13px;
+    margin-right: 8px;
+}
+
+.archive-header .archive-header-share .share-to{
+    margin-right: 13px;
+    font-weight:bold;
+    vertical-align:middle;
+}
+
+.archive-footer .archive-time {
+    float: left;
+    line-height: 20px;
+    margin: 10px 0 0 0;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.archive-footer .archive-option {
+    float: right;
+}
+
+.archive-footer .archive-option a {
+    margin: 5px 10px 0px 0px;
+}
+
+#top {
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../images/totop.gif) no-repeat;
+    text-indent: -9999px;
+    text-decoration: none;
+}
+.archive-widget .archive-share {
+    margin : 5px 0px 0px -5px;
+}
+
+/*百度分享条*/
+.archive-widget .bds_tools{
+    line-height: 16px;
+}
+
+.archive-widget span.bds_more, .archive-widget .bds_tools a {
+    font-family:'Microsoft YaHei',Tahoma, Helvetica, Arial, sans-serif;
+}
+
+
+/************************/
+.mywrap {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.photo-box {
+    border-radius: 4px;
+    padding: 2px;
+    background: #fff;
+    width: 140px;
+    height: 225px;
+    border: 1px solid #aaa;
+    border-bottom-color: #999;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qqFace{
+    margin-top:4px ;
+    background:#fff ;
+    padding:2px ;
+    border: 3px #cccccc solid;
+}
+.qqFace table td{padding:0px;}
+.qqFace table td img{cursor:pointer;border:1px #fff solid;}
+.qqFace table td img:hover{border:1px #0066cc solid;}
+
+
+
+.edit-tags {
+    border: 1px #cccccc solid;
+    padding: 8px 10px 8px 10px;
+    background: #f6f6f6;
+    width: 980px;
+    vertical-align: middle;
+}
+
+.edit-tags tags-input {
+
+}
+.editor-header {
+    margin: 5px 0px;
+}
+
+.editor-header h3,.editor-content h3  {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0px 0px;
+}
+.cur_tr {
+    background: #ffc;
+}
+.selectlist{width:340px; margin:10px auto;  border:1px solid #ccc;}
+.selectlist h5{height:32px; line-height:32px; padding:0 4px; border-bottom:1px dotted #d3d3d3; background:#f7f7f7}
+.selectlist h5 span{float:right; font-weight:500}
+.selectlist ul{margin-top:4px; margin-left:20px; list-style-type: disc}
+.selectlist ul li{line-height:26px}
+.selectlist p{line-height:28px; padding-left:6px}
+.selectlist ul li span{width:20px; height:20px}
+.selectlist ul li span.edit{ float:right;background:url(../images/edits.gif) no-repeat 0 5px; cursor:pointer}
+.selectlist ul li span.del,.selectlist ul li span.dels,.selectlist ul li span.cancer{ float:right;background:url(../images/del.gif) no-repeat 0 5px; cursor:pointer}
+.selectlist ul li span.ok,.selectlist ul li span.oks{float:right;background:url(../images/ok.gif) no-repeat 0 5px; cursor:pointer}

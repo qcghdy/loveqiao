@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <meta name="description" content="有爱，生活才会精彩" />
+    <meta name="keywords" content="爱情,爱,家庭,个人博客" />
+    <meta name="application-name" content="子木小乔-个人微博客" />
+    <base href="<?php echo base_url();?>">
+
+    <!-- Bootstrap Reference Begin-->
+    <link href="<?php echo base_url('static/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?php echo base_url('static/css/bootstrap-responsive.min.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <!--日期时间选择器：datetimepicker Begin-->
+    <link href="<?php echo base_url('static/bootstrap-datetimepicker-master/css/datetimepicker.css');?>" rel="stylesheet" media="screen">
+    <!--日期时间选择器：datetimepicker End-->
+    <!-- Bootstrap Reference End-->
+
+    <link href="<?php echo base_url('static/css/loveqiao.css');?>" rel="stylesheet" type="text/css" media="screen">
+    <link href="<?php echo base_url('static/css/admin.css');?>" rel="stylesheet" type="text/css" media="screen">
+
+
+
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<!-- S Header  这部分是公用的-->
+<?php include_once('common/header.html'); ?>
+<!-- E Header  这部分是公用的-->
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <section style="margin-top: 50px;">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span8 offset2">
+                            <div class="common-model" role="dialog"  id="sign-in-model">
+                                <div class="modal-header dialog_header">
+                                    <h4 id="myModalLabel1">用户反馈</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal">
+                                        <div class="control-group">
+                                            <label class="lq-control-label-resize-width" for="username">姓名</label>
+                                            <div class="lq-controls-resize-margin-left">
+                                                <input type="text" class="input-xlarge" id="username" placeholder="请留下您的姓名">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="lq-control-label-resize-width" for="email">邮箱</label>
+                                            <div class="lq-controls-resize-margin-left">
+                                                <input type="text" class="input-xlarge" id="email" placeholder="请留下您的邮箱"><small></small>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="lq-control-label-resize-width" for="feedback">反馈</label>
+                                            <div class="lq-controls-resize-margin-left">
+                                                <textarea class="input-xlarge" id="feedback" rows="5" style="width: 500px;" placeholder="请留下您的意见和建议"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="lq-control-label-resize-width" for="captcha-input-feedback">验证码</label>
+                                            <div class="lq-controls-resize-margin-left">
+                                                <input type="text" class="input-xlarge" id="captcha-input-feedback" placeholder="请输入验证码" maxlength="6">
+                                                <img src="<?php echo base_url('login/captcha').'?t='.mt_rand(1,100000);?>" id="captcha-img-feedback" title="看不清，点击换一张" style="margin: 7px 7px 7px 0px">
+                                                <a href="javascript:void(0);" id="code-change">看不清，换一张</a>
+                                            </div>
+                                        </div>
+                                        <div class="" id="feedback-state-tips">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <!--<button class="btn" data-dismiss="modal">取消</button>-->
+                                    <button class="btn btn-primary" id="feedback-button-submit">提交反馈</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- S Footer  这部分是公用的-->
+<?php include_once('common/footer.html'); ?>
+<!-- E Footer  这部分是公用的-->
+
+<!-- Bootstrap Reference Begin-->
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+<script src="<?php echo base_url('static/js/jquery.js?v2.3.0');?>"  charset="UTF-8"></script>
+<script src="<?php echo base_url('static/js/bootstrap.min.js');?>"  charset="UTF-8"></script>
+<!-- Bootstrap Reference End-->
+
+<!-- Plugins Begin-->
+
+<!-- Plugins Begin-->
+
+<!-- Applications Begin-->
+<script src="<?php echo base_url('static/js/common.js');?>"></script>
+<script src="<?php echo base_url('static/js/feedback.js');?>"></script>
+<!-- Applications Begin-->
+
+<script type="text/javascript">
+
+
+</script>
+<script>
+
+
+</script>
+</body>
+</html>
